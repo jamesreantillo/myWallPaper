@@ -18,9 +18,9 @@ const Gallery = () => {
         {images.map((image) => (
           <div className='gallery-img'>
             <div className='gallery-info'>
-              <p>{image.photographer}</p>
+              <p>{image.photographer.toLowerCase()}</p>
               <a href={image.src.original} download>
-                Download hi
+                download
               </a>
             </div>
             <img src={image.src.large} alt={image.photographer_url}></img>
@@ -45,7 +45,7 @@ const Main = styled(motion.div)`
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     padding: 2rem 0rem;
     width: 80%;
     margin: auto;
