@@ -1,8 +1,6 @@
 import { createClient } from 'pexels';
 
-const client = createClient(
-  '563492ad6f91700001000001c60fb79a6010403881426e0eeba18eb8'
-);
+const client = createClient(process.env.REACT_APP_SECRET_KEY);
 
 export const photosData = async () => {
   const photos = await client.photos
